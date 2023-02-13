@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:steelblue;
+    /* background: linear-gradient(to right, rgb(198, 158, 247), rgb(87, 104, 150)); */
+}
+
+/*FOOTER*/
+.containerfooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.redes{
+    margin-right: 0.sem;
+}
+img{ 
+    width: 50px;
+}
+/*para la vista de celular-- footer*/
+@media(max-width: 575px){
+    .containerfooter{
+    flex-direction: column;
+    }
+    .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .redes img{ 
+    margin: 0.3em;
+    }
+}
