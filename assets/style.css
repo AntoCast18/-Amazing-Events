@@ -2,15 +2,22 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color:steelblue;
-    /* background: linear-gradient(to right, rgb(198, 158, 247), rgb(87, 104, 150)); */
+    /*  */
 }
-
+header, nav{
+    background: linear-gradient(to right,#8f6bdb, #2A1063);
+}
 /*FOOTER*/
 .containerfooter{
+    background: linear-gradient(to right,#8f6bdb, #2A1063);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
+    text-align: center;
+    flex-direction: column;
+    margin: center;        
+    box-shadow: 4px -4px 5px #999;
 }
 .redes{
     margin-right: 0.sem;
