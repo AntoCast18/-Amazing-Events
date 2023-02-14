@@ -5,36 +5,32 @@
     font-family: sans-serif;
 }
 
-body {
-    display: block;
+body {  
     background-color: #1a161a;
 }
 
 main {
-    min-height: 79vh;
     padding: 1rem;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+    align-content: center;
 }
 
 label.form-check-label, label.form-label, a.nav-link {
     color: #146c43;
 }
 
-.bg-1 {
+h1{
     height: 15vh;
     padding-top: 15px;
-    text-align: center;
-    color:#72726e;
-    
+    color:#72726e;    
 }
 h6.cap{
     color: #999;
 }
 form{
   width: fit-content;
-margin-left: 500px;
+}
+form.cont{
+    margin-left: 500px;
 }
 fieldset {
     background-color:#212529;
