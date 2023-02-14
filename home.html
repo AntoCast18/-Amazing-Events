@@ -12,12 +12,13 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light">
+        <div class="row">
+        <nav class="navbar navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="./assets/LogoAmazingEvents.png" alt="logo" width="300" height="100">
                 </a>
-                <ul class="nav justify-content-center">
+                <ul class="nav justify-content-end">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -25,7 +26,7 @@
                         <a class="nav-link" href="upcoming.html">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pastevents.htm">Past Events</a>
+                        <a class="nav-link" href="pastevents.html">Past Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -36,13 +37,14 @@
                 </ul>
             </div>
         </nav>
+        </div>
     </header>
     <main>
         <div>
             <div class="bg-1">
                 <h1>H o m e</h1>
             </div>
-            <div class="search">
+            <div class="container">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                     <label class="form-check-label" for="inlineCheckbox1">Category</label>
@@ -70,45 +72,82 @@
             </div>
         </div>
 
-
-        <div class="search">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Cinema.jpg" class="card-img-top" alt="cinema">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Costume_Party.jpg" class="card-img-top" alt="party">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Food_Fair.jpg" class="card-img-top" alt="food">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Marathon.jpg" class="card-img-top" alt="maraton">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Museum_Tour.jpg" class="card-img-top" alt="tour">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/Music_Concert.jpg" class="card-img-top" alt="music">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+          
         </div>
     </main>
     <footer>
