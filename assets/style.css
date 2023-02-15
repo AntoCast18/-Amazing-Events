@@ -5,48 +5,56 @@
     font-family: sans-serif;
 }
 
-body {  
+body {
     background-color: #1a161a;
 }
 
 main {
-    padding: 1rem;
-    align-content: center;
+    justify-content: center;
 }
 
-label.form-check-label, label.form-label, a.nav-link {
+label.form-check-label,
+label.form-label,
+a.nav-link {
     color: #146c43;
 }
 
-h1{
+h1 {
     height: 15vh;
     padding-top: 15px;
-    color:#72726e;    
+    color: #72726e;
 }
-h6.cap{
+
+h6.cap {
     color: #999;
+    text-align: center;
+    font-size: medium;
 }
-form{
-  width: fit-content;
+
+form {
+    width: fit-content;
 }
-form.cont{
+
+form.cont {
     margin-left: 500px;
 }
+
 fieldset {
-    background-color:#212529;
+    background-color: #212529;
     padding: 30px;
     margin: 30px;
-  }
-  
-  legend {
+}
+
+legend {
     background-color: gray;
     color: white;
     padding: 5px 10px;
-  }
-  
-  input {
+}
+
+input {
     margin: 5px;
-  }
+}
+
 .containerfooter {
     background: linear-gradient(#929290, #252525);
     display: flex;
@@ -55,13 +63,13 @@ fieldset {
     font-size: 14px;
     text-align: center;
     flex-direction: column;
-    margin: center;
     box-shadow: 4px -4px 5px #999;
 }
 
 .redes {
-    margin-right: 0.sem;
+    margin-right: 1rem;
 }
+
 .redes img {
     width: 50px;
 }
@@ -71,7 +79,7 @@ fieldset {
         flex-direction: column;
     }
 
-    .redes{
+    .redes {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,15 +89,17 @@ fieldset {
         margin: 0.3em;
     }
 }
-@media (min-width: 575px){
-    form.d-flex{
+
+@media (min-width: 575px) {
+    form.d-flex {
         width: 15%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
     }
-    .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
