@@ -4,102 +4,67 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 body {
     background-color: #1a161a;
-}
-
-main {
+    align-items: center;
     justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-
-label.form-check-label,
-label.form-label,
-a.nav-link {
-    color: #146c43;
+main {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-
+label.form-check-label, label.form-label, a.nav-link {
+    color: #4feb69;
+}
+nav img{
+    margin-right: 150px;
+}
+main div{
+    margin: auto;
+}
+form{
+   width: fit-content;
+   margin: inherit;
+}
 h1 {
     height: 15vh;
     padding-top: 15px;
-    color: #72726e;
+    color: #f8f8f4;
 }
-
 h6.cap {
     color: #999;
     text-align: center;
     font-size: medium;
 }
-
-form {
-    width: fit-content;
-}
-
-form.cont {
-    margin-left: 500px;
-}
-
 fieldset {
     background-color: #212529;
     padding: 30px;
     margin: 30px;
+    justify-content: center;
 }
-
 legend {
     background-color: gray;
     color: white;
     padding: 5px 10px;
 }
-
 input {
     margin: 5px;
 }
-
-.containerfooter {
-    background: linear-gradient(#929290, #252525);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    text-align: center;
-    flex-direction: column;
-    box-shadow: 4px -4px 5px #999;
+.row{
+        display: contents;
 }
-
-.redes {
-    margin-right: 1rem;
-}
-
-.redes img {
-    width: 50px;
-}
-
-@media(max-width: 575px) {
-    .containerfooter {
-        flex-direction: column;
-    }
-
-    .redes {
+footer{
+	    text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .redes img {
-        margin: 0.3em;
-    }
-}
-
-@media (min-width: 575px) {
-    form.d-flex {
-        width: 15%;
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
+        margin: center;        
+     }
+     div.redes1 img{
+        width: 200px;
+        height: inherit;
+     }
