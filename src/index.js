@@ -11,7 +11,7 @@ function mostrarEvents(events){
                     <div class="card-body">
                         <p class="card-text">${event.description}</p>
                         <p class="m-0">Price: $${event.price}</p>
-                        <a href="#" class="btn btn-outline-success">Details</a>
+                        <a href="details.html?id=${event._id}" class="btn btn-outline-success">Details</a>
                     </div>
             </div>
         </div>`
