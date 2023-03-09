@@ -97,7 +97,6 @@ checksAndSearch();
 /* const categoryContainer = document.querySelector(".category");
 const arrayCategories = data.events;
 let= categ = "";
-
 function createCategories(arrayCategories){
     let id = 1;
     arrayCategories.forEach(cate => {
@@ -107,7 +106,6 @@ function createCategories(arrayCategories){
     })
     id ++
 }
-
 createCategories(filterCategory)
 categoryContainer.innerHtml = categ; 
  */
