@@ -24,7 +24,6 @@ cardEvents.innerHTML= eventosHtml;
 let arrayCheck = []; //  checkbox seleccionados
 let search = ''; 
 
-
 function categories() {//  para crear checkbox por cada categoria
     let checkbox = document.getElementById('checkboxes-container');
     let templateCheckbox = '';
@@ -110,15 +109,4 @@ createCategories(filterCategory)
 categoryContainer.innerHtml = categ; 
  */
 
-/* const checkboxCategory = document.querySelectorAll('input[type="checkbox"]');
-    
-    for (const checkbox of checkboxCategory) {
-      checkbox.addEventListener('change', () => {
-        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const values = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
-        
-        console.log(values);
-      });
-    }
- */
- 
+

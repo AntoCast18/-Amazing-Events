@@ -1,14 +1,12 @@
 /* Obtenenos los datos de los parametros de la URL */
-
 let params = new URLSearchParams(document.location.search)
 let id = params.get("id")
- let html = "";
 
-let evento = data.events.find(events => events._id == id);//busca los datos por id
+let evento = data.events.filter(events => events._id == id);//busca los datos por id
 
-const cardEvents = document.getElementById(".cardevents");/* Renderizar profile */   
-function detalle(event){    
-    html.innerHTML =`
+const cardEvents = document.getElementById(".cardevents");/* Renderizar profile */
+let html = "";
+html += `
         <div class="card2">
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
@@ -27,7 +25,8 @@ function detalle(event){
                 </div>
             </div>
         </div>`
-    
-}
-console.log(evento)
-detalle();
+
+cardEvents.innerHTML = html;
+
+
+

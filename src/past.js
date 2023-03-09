@@ -11,6 +11,7 @@ function eventosPasados(events, fecha) {
     }
 }
 eventosPasados (events,  fecha)
+
 function mostrarPasados(events) {
     for (const event of events) {
         pasadoHtml += `
@@ -33,7 +34,6 @@ cardEvents.innerHTML= pasadoHtml;
 let arrayCheck = []; //  checkbox seleccionados
 let search = ''; 
 
-
 function categories() {//  para crear checkbox por cada categoria
     let checkbox = document.getElementById('checkboxes-container');
     let templateCheckbox = '';
@@ -42,11 +42,11 @@ function categories() {//  para crear checkbox por cada categoria
     let arrayCategories = [...setCategories];
 
     arrayCategories.forEach((category, id) => {
-        templateCheckbox += `   <div class="form-check form-check-inline"> 
-                            <input class="form-check-input" type="checkbox" id="${id}" value="${category}">
-                            <label class="form-check-label" for="${id}">${category}</label>
-                        </div>
-                    `;
+        templateCheckbox += `
+        <div class="form-check form-check-inline"> 
+        <input class="form-check-input" type="checkbox" id="${id}" value="${category}">
+        <label class="form-check-label" for="${id}">${category}</label>
+        </div> `;
         checkbox.innerHTML = templateCheckbox;
     })
 }
@@ -69,7 +69,7 @@ function checkbox() {
 checkbox();
 
 
-function searchCat() {// INPUT
+function searchCat() {// INPUT para buscar
     let input = document.getElementById('search');
     input.addEventListener('keyup', (event) => {
         search = event.target.value;
@@ -78,9 +78,8 @@ function searchCat() {// INPUT
 }
 searchCat();
 
-
-function checksAndSearch() {// BUSCAR
-    let filteredEvents = [];
+let filteredEvents = [];
+function checksAndSearch() {// BUSCAR  
 
     if (arrayCheck.length > 0 && search !== "") {
         arrayCheck.map(cat => {
@@ -88,7 +87,7 @@ function checksAndSearch() {// BUSCAR
                 event.category == cat))
         })
 
-        console.log(filteredEvents)
+   
     } else if (arrayCheck.length > 0 && search === "") {
         arrayCheck.map(cat => {
             filteredEvents.push(...data.events.filter(event => event.category == cat))
@@ -102,3 +101,4 @@ function checksAndSearch() {// BUSCAR
 }
 
 checksAndSearch();
+console.log(filteredEvents)
