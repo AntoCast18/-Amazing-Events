@@ -11,9 +11,8 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
 }
+
 main {
-    margin: 0px;
-    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -21,9 +20,7 @@ main {
 label.form-check-label, label.form-label, a.nav-link {
     color: #4feb69;
 }
-nav img{
-    margin-right: 150px;
-}
+
 main div{
     margin: auto;
 }
@@ -35,7 +32,7 @@ h1 {
     height: 15vh;
     padding-top: 15px;
     color: #f8f8f4;
-    margin-left: 40px;
+   text-align: center;
 }
 h6.cap {
     color: #999;
@@ -67,5 +64,4 @@ footer{
      }
      div.redes1 img{
         width: 200px;
-        height: inherit;
      }
