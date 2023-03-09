@@ -98,7 +98,7 @@ function checksAndSearch() {// BUSCAR
     } else {
         filteredEvents.push(...data.events);
     }
-    mostrarEvents(filteredEvents);
+    mostrarPasados(filteredEvents);
 }
 
 checksAndSearch();
