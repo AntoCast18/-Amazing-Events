@@ -4,28 +4,26 @@ let id = params.get("id")
 
 let evento = data.events.filter(events => events._id == id);//busca los datos por id
 
-const cardEvents = document.getElementById(".cardevents");/* Renderizar profile */
+const cardEvents = document.querySelector(".cardevents");/* Renderizar profile */
 let html = "";
-html += `
-        <div class="card2">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="${evento.image}" class="img-fluid rounded-start" alt="foto de ${evento.nombre}">
-                    </div>
-                    <div class="col-md-8">
+html = `
+        <div class="col">
+            <div class="card" >
+                    <img src="${evento[0].image}" class="img-fluid rounded-start" alt="foto de ${evento[0].nombre}">
+                
                         <div class="card-body">
-                            <h5 class="card-title">${evento.name} ${evento.date}</h5>
-                            <p class="card-text">${evento.description}</p>
-                            <p class="card-text"><small class="text-muted">${evento.price}</small></p>
-                            <p class="card-text">${evento.category} ${evento.capacity} ${evento.assistanse}</p>
-                            <a href="/index.html" class="btn btn-outline-success">VOLVER</a>
-                        </div>
+                            <h5 class="card-title">${evento[0].name} ${evento[0].date}</h5>
+                            <p class="card-text">${evento[0].description}</p>
+                            <p class="card-text"><small class="text-muted">${evento[0].price}</small></p>
+                            <p class="card-text">${evento[0].category} ${evento[0].capacity} ${evento[0].assistanse}</p>
+                            <input type="button" onclick="backk('${evento[0]._id}')" value="VOVLER" id="button" class="btn btn-outline-success">
+                            </div>
                     </div>
-                </div>
-            </div>
+               
         </div>`
-
+        function backk(id) {
+            window.location.href = `index.html?id=${id}`
+        }
 cardEvents.innerHTML = html;
 
 

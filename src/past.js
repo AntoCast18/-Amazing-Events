@@ -15,7 +15,7 @@ eventosPasados (events,  fecha)
 function mostrarPasados(events) {
     for (const event of events) {
         pasadoHtml += `
-        <div class="col">
+        <div class="col1">
             <div class="card h-100">
             <img src=${event.image} class="card-img-top" alt="cinema">
                     <h5 class="card-title">${event.name}</h5>

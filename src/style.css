@@ -4,7 +4,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body {
+
+body, footer, header {
     background-color: #1a161a;
     align-items: center;
     justify-content: center;
@@ -12,56 +13,53 @@ body {
     flex-wrap: wrap;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 label.form-check-label, label.form-label, a.nav-link {
     color: #4feb69;
 }
 
-main div{
-    margin: auto;
+form {
+    width: fit-content;
+    margin: inherit;
 }
-form{
-   width: fit-content;
-   margin: inherit;
-}
+
 h1 {
     height: 15vh;
     padding-top: 15px;
     color: #f8f8f4;
-   text-align: center;
+    text-align: center;
 }
+
 h6.cap {
     color: #999;
     text-align: center;
     font-size: medium;
 }
+
 fieldset {
     background-color: #212529;
     padding: 30px;
     margin: 30px;
     justify-content: center;
 }
+
 legend {
     background-color: gray;
     color: white;
     padding: 5px 10px;
 }
+
 input {
     margin: 5px;
 }
-.row{
-        display: contents;
+
+footer {
+    text-align: center;
+    flex-direction: column;
 }
-footer{
-	    text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin: center;        
-     }
-     div.redes1 img{
-        width: 200px;
-     }
+
+.imgLog {
+    width: 150px;
+}
+.col{
+    margin: auto;
+}

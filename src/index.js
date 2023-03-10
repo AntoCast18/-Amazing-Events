@@ -5,7 +5,7 @@ let eventosHtml = "";
 function mostrarEvents(events){
     for (const event of events){
         eventosHtml += `
-        <div class="col">
+        <div class="col1">
             <div class="card h-100">
             <img src=${event.image} class="card-img-top" alt="cinema">
                     <h5 class="card-title">${event.name}</h5>
@@ -18,8 +18,15 @@ function mostrarEvents(events){
         </div>`
     }
 }
-mostrarEvents(events) 
-cardEvents.innerHTML= eventosHtml;
+                        // <a href="details.html?id=${event._id}" class="btn btn-outline-success">Details</a>
+
+ mostrarEvents(events) 
+ cardEvents.innerHTML= eventosHtml;
+function seeDetail(id) {
+    window.location.href = `./details.html?id=${id}`
+}
+
+
 
 let arrayCheck = []; //  checkbox seleccionados
 let search = ''; 
