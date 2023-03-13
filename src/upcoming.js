@@ -1,8 +1,11 @@
 const cardEvents = document.querySelector(".cardevents");
 const events = data.events;
 const  fecha =  data.currentDate;
+let arrayCheck = []; //  checkbox seleccionados
+let search = ''; 
 const futuros = [];
 let futurosHtml = ""; 
+
 function eventosFututros(events, fecha) {
     for (const event of events) {
         if(event.date >  fecha){            
@@ -11,6 +14,7 @@ function eventosFututros(events, fecha) {
     }
 }
 eventosFututros (events,  fecha)
+
 function mostrarFuturos(events) {
     for (const event of events) {
         futurosHtml += `
@@ -29,11 +33,8 @@ function mostrarFuturos(events) {
 }
 mostrarFuturos(futuros) 
 cardEvents.innerHTML= futurosHtml;
-let arrayCheck = []; //  checkbox seleccionados
-let search = ''; 
 
-
-function categories() {//  para crear checkbox por cada categoria
+function categories() {//  
     let checkbox = document.getElementById('checkboxes-container');
     let templateCheckbox = '';
     let categories = data.events.map(event => event.category);
@@ -41,19 +42,19 @@ function categories() {//  para crear checkbox por cada categoria
     let arrayCategories = [...setCategories];
 
     arrayCategories.forEach((category, id) => {
-        templateCheckbox += `   <div class="form-check form-check-inline"> 
+        templateCheckbox += `   
+                        <div class="form-check form-check-inline"> 
                             <input class="form-check-input" type="checkbox" id="${id}" value="${category}">
                             <label class="form-check-label" for="${id}">${category}</label>
-                        </div>
-                    `;
+                        </div> `
         checkbox.innerHTML = templateCheckbox;
+       
     })
 }
-categories();
+categories(); // trae las categoria a los chechbox (funciona)
 
-function checkbox() {
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    
+function checkboxF() {
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');    
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', (box) => {
             if (box.target.arrayCheck) {
@@ -61,43 +62,42 @@ function checkbox() {
             } else {
                 arrayCheck = arrayCheck.filter(uncheck => uncheck != box.target.value);
             }
-            checksAndSearch();
+            busqueda();
         });
-    });
+    }); console.log(checkboxes) 
 }
-checkbox();
+checkboxF(); // va a escuchar los eventos del checkbox (funciona)
 
 
-function searchCat() {// INPUT
+function searchCat() {
     let input = document.getElementById('search');
-    input.addEventListener('keyup', (event) => {
-        search = event.target.value;
-        checksAndSearch();
-    });
-}
-searchCat();
+    input.addEventListener('keyup', (events) => {
+        search = events.target.value; 
+        busqueda();
+    }); console.log(search) 
+} 
+searchCat();// escucha desde el INPUT
 
 
-function checksAndSearch() {// BUSCAR
+function busqueda() {
     let filteredEvents = [];
-
     if (arrayCheck.length > 0 && search !== "") {
         arrayCheck.map(cat => {
-            filteredEvents.push(...data.events.filter(event => event.name.toLowerCase().includes(search.trim().toLowerCase()) &&
-                event.category == cat))
+            filteredEvents.push(...data.events.filter(event => 
+                event.name.toLowerCase().includes(search.trim().toLowerCase()) && event.category == cat))
         })
-
         console.log(filteredEvents)
     } else if (arrayCheck.length > 0 && search === "") {
         arrayCheck.map(cat => {
             filteredEvents.push(...data.events.filter(event => event.category == cat))
         })
     } else if (arrayCheck.length == 0 && search !== "") {
-        filteredEvents.push(...data.events.filter(event => event.name.toLowerCase().includes(search.trim().toLowerCase())))
+        filteredEvents.push(...data.events.filter(event => 
+            event.name.toLowerCase().includes(search.trim().toLowerCase())))
     } else {
         filteredEvents.push(...data.events);
     }
+    console.log(filteredEvents) 
     mostrarFuturos(filteredEvents);
 }
-
-checksAndSearch();
+busqueda();// BUSCAR POR INPUT Y CHECKBOX (no funciona)

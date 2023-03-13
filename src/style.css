@@ -5,10 +5,11 @@
     font-family: sans-serif;
 }
 
-body, footer, header {
+body, footer, header, main {
+    overflow-x: hidden;
     background-color: #1a161a;
-    align-items: center;
-    justify-content: center;
+     align-items: center;
+    justify-content: center; 
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -62,4 +63,8 @@ footer {
 }
 .col{
     margin: auto;
+}
+.col1{
+    width: 300px;
+    margin-left: auto;
 }
