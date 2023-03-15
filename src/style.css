@@ -64,7 +64,9 @@ footer {
 .col{
     margin: auto;
 }
-.col1{
-    width: 300px;
-    margin-left: auto;
+
+.bi-arrow-right, .bi-arrow-left{
+color: #f6b2ed;
+font-size: 1.5rem;
 }
+
