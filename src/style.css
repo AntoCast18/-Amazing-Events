@@ -42,31 +42,27 @@ fieldset {
     margin: 30px;
     justify-content: center;
 }
-
 legend {
     background-color: gray;
     color: white;
     padding: 5px 10px;
 }
-
 input {
     margin: 5px;
 }
-
 footer {
     text-align: center;
     flex-direction: column;
 }
-
 .imgLog {
     width: 150px;
 }
 .col{
     margin: auto;
 }
-
 .bi-arrow-right, .bi-arrow-left{
-color: #f6b2ed;
-font-size: 1.5rem;
+padding:  30px;
+color: #b10b69;
+font-size: 3.0rem;
 }
 
