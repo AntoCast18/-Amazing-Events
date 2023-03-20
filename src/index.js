@@ -3,6 +3,7 @@ const events = data.events;
 let arrayCheck = []; //  para los checkbox seleccionados
 let search = ''; 
 let eventosHtml = "";
+let categoriaSelect = []
 
 function mostrarEvents(events){
     for (const event of events){
@@ -28,63 +29,6 @@ function seeDetail(id) {
     window.location.href = `./details.html?id=${id}`
 }
 
-//crear Checkbox
-function crearCheckbox(cat,i){
-    return `
-    <div class="form-check form-check-inline m-0">
-        <input class="form-check-input valoresCheck" type="checkbox" name="categorias" id="categoria${i}" value="${cat}"   />
-        <label class="form-check-label" for="categoria${i}">${cat}</label>
-    </div>`
-  }
-
-//Categorias
-function cargarCategorias(arrayCat){
-    let categorias = "";
-    for (let i=0;i<arrayCat.length;i++){
-        categorias +=  crearCheckbox(arrayCat[i],i);
-    }
-    return categorias;
-  }
-
-  //filtrar Checkbox 
-  function filtrarCheckbox(events,checkbox){
-    let eventfiltrados = [];
-    if(checkbox.length > 0){
-        checkbox.forEach((categoria)=>{
-            events.forEach((event)=>{
-                if(event.category==categoria){
-                    eventfiltrados.push(event);
-                }
-            });        
-        });
-    }else{
-        eventfiltrados = events;
-    }
-    return eventfiltrados;
-  }
-
-  function buscar(){
-    let eventosEncontrados = [];
-    let eventCheckbox = filtrarCheckbox(events, categoriaSelect);
-    eventosEncontrados = eventCheckbox.filter((event)=>{
-        return eventosFiltrados = (event.name.toLowerCase().includes(buscador.value.toLowerCase()));
-    });
-    return eventosEncontrados;
-  }
-
-// sacar los duplicados del array
-function eliminarDuplicados (array){
-    let unicos = []
-    for(let i = 0 ; i< array.length; i++){
-        if (!unicos.includes(array[i])){
-            unicos.push(array[i])
-        }
-    }
-    return unicos
-  }
-  
-  let categoriaSelect = []
-
 //Checkbox
 // checkbox de cada categoria
 const categorias = document.getElementById('checkboxes-container')
@@ -107,9 +51,64 @@ checks.forEach((e)=>{//escucha los eventos de cada checkbox
   });
 });
 
+
 //Buscador
 let buscador = document.getElementById('search');
 buscador.addEventListener('keyup',()=> { 
-  let eventosEncontrados = buscar();
-  cardEvents.innerHTML =mostrarEvents(eventosEncontrados);
+    let eventosEncontrados = buscar();
+    cardEvents.innerHTML = mostrarEvents(eventosEncontrados);
 });
+
+
+//Categorias
+function cargarCategorias(arrayCat){
+    let categorias = "";
+    for (let i=0;i<arrayCat.length;i++){
+        categorias +=  crearCheckbox(arrayCat[i],i);
+    }
+    return categorias
+}
+
+function crearCheckbox(cat,i){
+    return `
+    <div class="form-check form-check-inline m-0">
+        <input class="form-check-input valoresCheck" type="checkbox" name="categorias" id="categoria${i}" value="${cat}"   />
+        <label class="form-check-label" for="categoria${i}">${cat}</label>
+    </div>`
+}
+ //filtrar Checkbox 
+function filtrarCheckbox(events,checkbox){
+    let eventfiltrados = [];
+    if(checkbox.length > 0){
+        checkbox.forEach((categoria)=>{
+            events.forEach((events)=>{
+                if(events.category==categoria){
+                    eventfiltrados.push(events);
+                }
+            });        
+        });
+    }else{
+        eventfiltrados = events;
+    }
+    return eventfiltrados;
+}
+
+function buscar(){
+    let eventosEncontrados = [];
+    let eventCheckbox = filtrarCheckbox(data.events,categoriaSelect);
+    eventosEncontrados = eventCheckbox.filter((event)=>{
+        return eventosFiltrados = (event.name.toLowerCase().includes(buscador.value.toLowerCase()));
+    });
+    return eventosEncontrados;
+}
+
+//saca los duplicados del array
+function eliminarDuplicados(array){
+    let unicos = []
+    for(let i = 0 ; i< array.length; i++){
+        if (!unicos.includes(array[i])){
+            unicos.push(array[i])
+        }
+    }
+    return unicos
+}

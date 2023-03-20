@@ -25,6 +25,3 @@ html = `
             window.location.href = `index.html?id=${id}`
         }
 cardEvents.innerHTML = html;
-
-
-

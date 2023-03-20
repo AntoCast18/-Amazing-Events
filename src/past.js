@@ -5,6 +5,10 @@ const pasados = [];
 let pasadoHtml = ""; 
 let search = ''; 
 
+
+
+
+
 function eventosPasados(events, fecha) {
     for (const event of events) {
         if(event.date < fecha){            
@@ -107,7 +111,7 @@ checks.forEach((e)=>{//escucha los eventos de cada checkbox
           categoriaSelect.splice(categoriaSelect.indexOf(e.value),1);
       }
       let eventosEncontrados = buscar();
-      cardEvents.innerHTML = mostrarPasados(eventosEncontrados);
+      cardEvents.innerHTML = eventosPasados(eventosEncontrados);
   });
 });
 
@@ -115,5 +119,5 @@ checks.forEach((e)=>{//escucha los eventos de cada checkbox
 let buscador = document.getElementById('search');
 buscador.addEventListener('keyup',()=> { 
   let eventosEncontrados = buscar();
-  cardEvents.innerHTML =mostrarPasados(eventosEncontrados);
+  cardEvents.innerHTML =eventosPasados(eventosEncontrados);
 });
