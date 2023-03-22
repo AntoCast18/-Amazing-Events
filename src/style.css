@@ -31,9 +31,9 @@ h1 {
 }
 
 h6.cap {
-    color: #999;
+    color:#b10b69;
     text-align: center;
-    font-size: medium;
+    font-size:larger;
 }
 
 fieldset {
@@ -61,7 +61,6 @@ footer {
     margin: auto;
 }
 .bi-arrow-right, .bi-arrow-left{
-padding:  30px;
 color: #b10b69;
 font-size: 3.0rem;
 }

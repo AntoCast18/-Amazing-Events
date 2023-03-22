@@ -16,7 +16,7 @@ html = `
                             <p class="card-text">${evento[0].description}</p>
                             <p class="card-text"><small class="text-muted">${evento[0].price}</small></p>
                             <p class="card-text">${evento[0].category} ${evento[0].capacity} ${evento[0].assistanse}</p>
-                            <input type="button" onclick="backk('${evento[0]._id}')" value="VOVLER" id="button" class="btn btn-outline-success">
+                            <input type="button" onclick="backk('${evento[0]._id}')" value="HOME" id="button" class="btn btn-outline-success">
                             </div>
                     </div>
                
