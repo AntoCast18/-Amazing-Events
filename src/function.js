@@ -93,16 +93,14 @@ fetch(url).then(response => response.json())
         //Cargo las tarjetas
         contTarjeta.innerHTML = generarCards(datosApi.events);
         //Cargo los checkbox
-        let categoriasFiltradas = deletCards(datosApi.events.map((cat)=> cat.category));
+        let categoriasFiltradas = deletCards(datosApi.events.map((cat) => cat.category));
         categorias.innerHTML = cargarCategorias(categoriasFiltradas);
         //Implementaré un método de filtrado por checkbox
         let checks = document.querySelectorAll('.valoresCheck');
-        checks.forEach((e)=>{
-            e.addEventListener('change', ()=> modificarArrayCheck(e));
+        checks.forEach((e) => {
+            e.addEventListener('change', () => modificarArrayCheck(e));
         });
-    }).catch(error => console.error(error.message));
-
-
+    }).catch(error => console.error(error.message))
 
 //Buscador
 let buscador = document.getElementById('search');
