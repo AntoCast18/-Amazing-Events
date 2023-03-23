@@ -1,4 +1,20 @@
+const urlApi = 'https://mindhub-xj03.onrender.com/api/amazing'
+
+// Funcion asincrona que obtiene los datos de la API
+async function leerDatos() {
+    await fetch(urlApi)
+        .then(response => response.json())
+        .then(urlApi => {
+            data = urlApi;
+            detalles();
+        })
+        .catch(error => console.log(error))
+}
+
+leerDatos();
+
 /* Obtenenos los datos de los parametros de la URL */
+function detalles(){
 let params = new URLSearchParams(document.location.search)
 let id = params.get("id")
 
@@ -16,12 +32,13 @@ html = `
                             <p class="card-text">${evento[0].description}</p>
                             <p class="card-text"><small class="text-muted">${evento[0].price}</small></p>
                             <p class="card-text">${evento[0].category} ${evento[0].capacity} ${evento[0].assistanse}</p>
-                            <input type="button" onclick="backk('${evento[0]._id}')" value="HOME" id="button" class="btn btn-outline-success">
+                            <a href="javascript:history.back()" class="btn btn-primary">Go back</a>
                             </div>
                     </div>
                
-        </div>`
-        function backk(id) {
+        </div>` 
+        /* function backk(id) {
             window.location.href = `index.html?id=${id}`
-        }
+        } */
 cardEvents.innerHTML = html;
+   }

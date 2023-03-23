@@ -56,22 +56,22 @@
         </div>
     </header>
     <main>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container"> <!--  muestra todas las checkbox -->
+                <div id="checkboxes-container">
+                </div>
+                <div class="d-flex searcher"><!-- SEARCH -->
+                    <form class="d-flex" role="search">
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            name="search">
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            </nav>
         <div class="container">
-            <!--  muestra todas las checkbox -->
-            <div id="checkboxes-container">
+            <div class="cardevents row row-cols-1 row-cols-md-3 g-4"> <!--  muestra todas las cards futuras -->
             </div>
-            <div class="d-flex searcher">
-                <form class="d-flex" role="search">
-                    <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        name="search">
-                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
-
-        </div>
-
-        <div class="cardevents row row-cols-1 row-cols-md-3 g-4">
-            <!--  muestra todas las cards futuras -->
         </div>
     </main>
     <!-- Remove the container if you want to extend the Footer to full width. -->

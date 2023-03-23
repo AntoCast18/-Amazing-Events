@@ -6,8 +6,8 @@ let datosAPI = {}
 
 function createCards(event) {
     return `
-    <div class="col1">
-    <div class="card">
+    <div class="col-sm-6">
+    <div class="card" style="width: 18rem;">
             <img src="${event.image}" class="card-img-top" alt="Images">
             <div class="card-body">
                 <h5 class="card-title">${event.name}</h5>
